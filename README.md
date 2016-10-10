@@ -1,5 +1,7 @@
 # Elfeed Emacs Web Feed Reader
 
+## This is the Elfeed Colemak Keybindings Fork
+
 Elfeed is an extensible web feed reader for Emacs, supporting both
 Atom and RSS. It requires Emacs 24.3 and is available for download
 from [MELPA](http://melpa.milkbox.net/) or
