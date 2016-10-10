@@ -55,7 +55,13 @@ It is recommended that you make a global binding for `elfeed`.
 Running the interactive function `elfeed` will pop up the
 `*elfeed-search*` buffer, which will display feed items.
 
- * <kbd>g</kbd>: refresh view of the feed listing
+** Colemak keybindings for elfeed rss reader mode for emacs
+
+ * <kbd>t</kbd>: refresh view of the feed listing
+ * <kbd>e</kbd>: view the next      message/entry
+ * <kbd>i</kbd>: view the previous  message/entry
+ * <kbd>o</kbd>: scroll the current message/entry up
+ * <kbd>'</kbd>: scroll the current message/entry down
  * <kbd>G</kbd>: fetch feed updates from the servers
  * <kbd>s</kbd>: update the search filter (see tags)
 
