@@ -33,7 +33,9 @@ Defaults to `elfeed-kill-buffer'.")
 
 (defvar elfeed-show-refresh-function #'elfeed-show-refresh--mail-style
   "Function called to refresh the `*elfeed-entry*' buffer.")
-
+;;; these probably only make sense on colemaks keyboard layout
+;;; where they all end up on the home row
+;;; next -e  previous -i refresh -t scrolldown -' scrollup -o
 (defvar elfeed-show-mode-map
   (let ((map (make-sparse-keymap)))
     (prog1 map
@@ -41,8 +43,10 @@ Defaults to `elfeed-kill-buffer'.")
       (define-key map "d" 'elfeed-show-save-enclosure)
       (define-key map "q" 'elfeed-kill-buffer)
       (define-key map "g" 'elfeed-show-refresh)
-      (define-key map "n" 'elfeed-show-next)
-      (define-key map "p" 'elfeed-show-prev)
+      (define-key map "e" 'elfeed-show-next)
+      (define-key map "t" 'elfeed-update)
+      (define-key map "o" 'scroll-down-command)
+      (define-key map "i" 'elfeed-show-prev)
       (define-key map "s" 'elfeed-show-new-live-search)
       (define-key map "b" 'elfeed-show-visit)
       (define-key map "y" 'elfeed-show-yank)
@@ -58,6 +62,7 @@ Defaults to `elfeed-kill-buffer'.")
       (define-key map [mouse-2] 'shr-browse-url)
       (define-key map "P" 'elfeed-show-play-enclosure)))
   "Keymap for `elfeed-show-mode'.")
+
 
 (defun elfeed-show-mode ()
   "Mode for displaying Elfeed feed entries.
